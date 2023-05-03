@@ -2,7 +2,7 @@
   - Start XAMPP or WAMP server,
   - Create a new database `testcrud`,
   - Create following tables in `testcrud` database,
-  
+   
       ```
       DROP TABLE IF EXISTS `users`;
       CREATE TABLE IF NOT EXISTS `users` (
@@ -25,9 +25,16 @@
         PRIMARY KEY (`id`),
         KEY `FK_products_1` (`user_id`)
       ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
-   - Navigate to following path on your browser 
-   - http://localhost/Login-Crud/views/user/login.php
-   - If you are not registered then first register before loging-in, to register navigate to following path
-   - http://localhost/Login-Crud/views/user/register.php
+      ```
+  - Add the credentials to `Login-Crud\Config\DBManager.php` file as follows,
+      ```
+      private $host     = 'localhost';
+      private $dbname   = 'testcrud';
+      private $username = 'root';
+      private $password = '';
+      ```
+  - Navigate to following path on your browser 
+  - http://localhost/Login-Crud/views/user/login.php
+  - If you are not registered then first register before loging-in, to register navigate to following path
+  - http://localhost/Login-Crud/views/user/register.php
 
