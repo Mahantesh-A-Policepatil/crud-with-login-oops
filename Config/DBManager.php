@@ -21,7 +21,7 @@ class DBManager {
 	*/
 	
 	private $host     = 'localhost';
-	private $dbname   = 'testCrud';
+	private $dbname   = 'testcrud';
 	private $username = 'root';
 	private $password = '';
 	
