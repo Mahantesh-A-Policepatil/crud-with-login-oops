@@ -61,7 +61,6 @@
 	<body>
 		
 		<div class="container" style="margin-top:100px;">
-			<a href="../product/view.php">View Products</a>
 			<form name="form1" method="post" action="../product/edit.php" class="form">
 		        <h1 class="text-center text-info">Update Product</h1>
 		        <div class="form-group">

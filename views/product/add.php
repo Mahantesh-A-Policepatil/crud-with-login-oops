@@ -54,7 +54,6 @@
 
 <body>
 <div class="container" style="margin-top:100px;">
-	<a href="view.php">View Products</a>
 	<form name="form1" method="post" action="add.php" class="form">
         <h1 class="text-center text-info">Add Product</h1>
         <div class="form-group">

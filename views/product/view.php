@@ -34,7 +34,7 @@
 					echo "<tr>";
 					echo "<td>".$row['name']."</td>";
 					echo "<td>".$row['quantity']."</td>";
-					echo "<td>".$row['price']."</td>";	
+					echo "<td>"."&#x20B9; ".$row['price']."</td>";	
 					echo "<td><a href=\"edit.php?id=$row[id]\" class='btn btn-success'>Edit</a>  
 					<a href=\"delete.php?id=$row[id]\" class='btn btn-danger' onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";		
 				}
