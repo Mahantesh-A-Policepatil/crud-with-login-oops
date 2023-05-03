@@ -1,7 +1,6 @@
 
 <!doctype html>
 <?php 
-  //session_start();    
   include_once '../layout/header.php';
   include_once "../../Controllers/UserController.php";
   $obj = new UserController();

@@ -1,8 +1,8 @@
 <?php 
-	if(!isset($_SESSION['valid'])) {
+	session_start(); 
+	if(!isset($_SESSION) || empty($_SESSION)){
 		header('Location: ../user/login.php');
 	}
-	session_start(); 
 	include_once "../../Controllers/ProductController.php";
 	$obj = new ProductController();
 

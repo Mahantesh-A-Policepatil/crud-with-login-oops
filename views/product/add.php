@@ -1,9 +1,9 @@
 <?php 
-	if(!isset($_SESSION['valid'])) {
-		header('Location: ../user/login.php');
-	}
 	session_start(); 
-	//include_once '../layout/header.php';
+	if(!isset($_SESSION) || empty($_SESSION)){
+		header('Location: ../user/login.php');
+	} 
+	include_once '../layout/header.php';
 	include_once "../../Controllers/ProductController.php";
 ?>
 
