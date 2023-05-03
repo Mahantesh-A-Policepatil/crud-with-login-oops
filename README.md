@@ -27,5 +27,5 @@
       ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
       `
    - Navigate to following path on your browser 
-     -- http://localhost/Login-Crud/views/user/login.php
+   - http://localhost/Login-Crud/views/user/login.php
 
