@@ -1,7 +1,7 @@
 # crud-with-login-oops
-  - Start XAMPP or WAMP server
-  - Create a new database `testcrud`
-  - Create following tables
+  - Start XAMPP or WAMP server,
+  - Create a new database `testcrud`,
+  - Create following tables in `testcrud` database,
   
       ```
       DROP TABLE IF EXISTS `users`;
