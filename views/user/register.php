@@ -51,12 +51,11 @@
 			//link to the previous page
 			echo "<br/><a href='javascript:self.history.back();'>Go Back</a>";
 		} else { 
-			// if all the fields are filled (not empty) 
-				
-			//insert data to database	
-			mysqli_query($mysqli, "INSERT INTO users(name, email, user_name, password) VALUES('$name', '$email', '$user_name', md5('$password'))")
-			or die("Could not execute the insert query.");
 			
+			//insert data to database	
+			
+			$obj->store($name, $email, $user_name, md5($password));
+						
 			//display success message
 			header('Location: ../user/login.php');
 		}
@@ -65,7 +64,7 @@
 
 <div class="container" style="margin-top:60px;">
 	<a href="../login/login.php" class="btn btn-primary">Login</a>	
-	<form id="regiserForm" name="regiserForm" method="post" action="../login/register.php" class="form">
+	<form id="regiserForm" name="regiserForm" method="post" action="../user/register.php" class="form">
         <h1 class="text-center text-info">Register</h1>
         <div class="form-group">
             <label for="username" class="text-info">Name:</label>
