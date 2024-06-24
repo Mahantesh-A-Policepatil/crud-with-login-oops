@@ -57,7 +57,7 @@ $obj = new UserController();
       <form id="login-form" name="form1" class="form" action="" method="post">
 
         <div class="form-group">
-          <label for="username" class="text-info">Username:</label>
+          <label for="username" class="text-info">User Name:</label>
           <input type="text" name="username" id="username" class="form-control">
         </div>
         <div class="form-group">
@@ -78,5 +78,29 @@ $obj = new UserController();
   include '../layout/footer.php'
   ?>
 </body>
+
+<script>
+// just for the demos, avoids form submit
+// jQuery.validator.setDefaults({
+//   debug: true,
+//   success: "valid"
+// });
+
+$( "#login-form").validate({
+  rules: {
+    username: {
+      required: true
+    },
+    password: {
+      required: true
+    }
+  },
+  messages: {
+    username: "Please enter Uer Name",
+    password: "Please enter Password"
+    
+  }
+});
+</script>
 
 </html>

@@ -20,7 +20,7 @@ $result = $obj->index($_SESSION['id']);
 	include '../layout/header.php'
 	?>
 	<div class="container" style="margin-top:100px;">
-		<a href="add.php" class="btn btn-primary">Add New Product</a>
+		<a style="margin-bottom:10px;" href="add.php" class="btn btn-primary">Add New Product</a>
 		<table width='80%' border=0 class="table table-dark">
 			<tr bgcolor='#CCCCCC'>
 				<td>Name</td>
