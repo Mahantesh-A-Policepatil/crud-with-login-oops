@@ -79,28 +79,26 @@ $obj = new UserController();
   ?>
 </body>
 
-<script>
-// just for the demos, avoids form submit
-// jQuery.validator.setDefaults({
-//   debug: true,
-//   success: "valid"
-// });
-
-$( "#login-form").validate({
-  rules: {
-    username: {
-      required: true
-    },
-    password: {
-      required: true
-    }
-  },
-  messages: {
-    username: "Please enter Uer Name",
-    password: "Please enter Password"
-    
-  }
-});
-</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+      jQuery('#login-form').validate({
+        rules: {
+          username: {
+            required: true,
+            minlength: 5
+          },
+          password: {
+            required: true,
+            minlength: 5
+          }
+        },
+        messages: {
+          username: "Please enter Uer Name",
+          password: "Please enter Password"
+          
+        }
+      });
+    });
+  </script>
 
 </html>

@@ -62,20 +62,20 @@ $price = $result['price'];
 <body>
 
 	<div class="container" style="margin-top:100px;">
-		<form name="form1" method="post" action="../product/edit.php" class="form">
+		<form id="update-product-form" name="form1" method="post" action="../product/edit.php" class="form">
 			<h1 class="text-center text-info">Update Product</h1>
 			<div class="form-group">
 				<label for="name" class="text-info">Product Name:</label>
-				<input type="text" name="name" value="<?php echo $name; ?>" class="form-control" required>
+				<input type="text" name="name" id="name" value="<?php echo $name; ?>" class="form-control" required>
 				<input type="hidden" name="id" value=<?php echo $_GET['id']; ?>>
 			</div>
 			<div class="form-group">
 				<label for="quantity" class="text-info">Quantity:</label>
-				<input type="text" name="quantity" value="<?php echo $quantity; ?>" class="form-control" required>
+				<input type="text" name="quantity"  id="quantity" value="<?php echo $quantity; ?>" class="form-control" required>
 			</div>
 			<div class="form-group">
 				<label for="price" class="text-info">Proce:</label>
-				<input type="text" name="price" value="<?php echo $price; ?>" class="form-control" required>
+				<input type="text" name="price" id="price" value="<?php echo $price; ?>" class="form-control" required>
 			</div>
 			<div class="form-group">
 				<input type="submit" name="update" class="btn btn-info btn-md" value="Update">
@@ -87,5 +87,28 @@ $price = $result['price'];
 	include '../layout/footer.php'
 	?>
 </body>
+<script type="text/javascript">
+    $(document).ready(function() {
+      jQuery('#update-product-form').validate({
+        rules: {
+          name: {
+            required: true
+          },
+          quantity: {
+            required: true
+          },
+          price: {
+            required: true
+          }
+        },
+        messages: {
+          name: "Please enter Product Name",
+          quantity: "Please enter Quantity",
+          price: "Please enter Price"
+          
+        }
+      });
+    });
+  </script>
 
 </html>

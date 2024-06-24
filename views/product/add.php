@@ -54,19 +54,19 @@ if (isset($_POST['submit'])) {
 
 <body>
 	<div class="container" style="margin-top:100px;">
-		<form name="form1" method="post" action="add.php" class="form">
+		<form id="create-product-form" name="form1" method="post" action="add.php" class="form">
 			<h1 class="text-center text-info">Add Product</h1>
 			<div class="form-group">
 				<label for="name" class="text-info">Product Name:</label>
-				<input type="text" name="name" class="form-control" required>
+				<input type="text" name="name" id="name" class="form-control" required>
 			</div>
 			<div class="form-group">
 				<label for="quantity" class="text-info">Quantity:</label>
-				<input type="text" name="quantity" class="form-control" required>
+				<input type="text" name="quantity" id="quantity" class="form-control" required>
 			</div>
 			<div class="form-group">
 				<label for="price" class="text-info">Price:</label>
-				<input type="text" name="price" class="form-control" required>
+				<input type="text" name="price" id="price" class="form-control" required>
 			</div>
 			<div class="form-group">
 				<input type="submit" name="submit" class="btn btn-info btn-md" value="Add">
@@ -78,5 +78,29 @@ if (isset($_POST['submit'])) {
 	include '../layout/footer.php'
 	?>
 </body>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+      jQuery('#create-product-form').validate({
+        rules: {
+          name: {
+            required: true
+          },
+          quantity: {
+            required: true
+          },
+          price: {
+            required: true
+          }
+        },
+        messages: {
+          name: "Please enter Product Name",
+          quantity: "Please enter Quantity",
+          price: "Please enter Price"
+          
+        }
+      });
+    });
+  </script>
 
 </html>
