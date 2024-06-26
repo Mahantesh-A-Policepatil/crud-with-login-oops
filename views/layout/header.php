@@ -28,6 +28,7 @@
             <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo ucfirst($_SESSION['name']) ?> <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="../product/view.php">Products</a></li>
+              <li><a href="../product/importData.php">Import CSV</a></li>
               <li><a href="../user/update.php">Update profile</a></li>
               <li><a href="../user/logout.php">Logout</a></li>
             </ul>
